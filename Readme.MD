@@ -6,7 +6,9 @@ Packages needed:
 
 Commands so far:
 
+<pre>
 !hello
 !dice
 !inspire  -- message on the server
 !inspire? -- private message
+</pre>
