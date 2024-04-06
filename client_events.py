@@ -1,5 +1,4 @@
 import discord
-from discord.ext import commands
 
 
 async def sendMessageOnChannel(member: discord.Member, channel_name: str, message: str, message_type: str):

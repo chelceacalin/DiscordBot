@@ -10,3 +10,5 @@ async def hello(ctx: commands.Context):
 @commands.command(name='dice')
 async def dice(ctx: commands.Context):
     await ctx.send(f'You have rolled {str(random.randint(1, 6))}')
+
+
