@@ -1,7 +1,8 @@
-import requests
 import json
+from typing import Dict
+
+import requests
 from discord.ext import commands
-from typing import List, Dict
 
 Quote = Dict[str, str]
 
