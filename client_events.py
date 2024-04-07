@@ -1,6 +1,7 @@
 from typing import List
 
 import discord
+from discord.ext import commands
 
 
 async def sendMessageOnChannel(member: discord.Member, channel_name: str, message: str, message_type: str):
@@ -21,6 +22,11 @@ async def on_member_join(member: discord.Member) -> None:
 
 async def on_member_remove(member: discord.Member) -> None:
     await sendMessageOnChannel(member, "general", f'{member} has decided to leave us :(', "channel")
+
+
+async def on_command_error(ctx: commands.Context, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("You don't have the permissions to do that.")
 
 
 bad_words: List[str] = ["fuck", "damn", "shit", "crap"]

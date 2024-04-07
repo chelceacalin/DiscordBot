@@ -5,6 +5,8 @@
 !join -- if you are on a voice channel, the bot will join it
 !leave -- if the bot is connected on the voice channel, it will leave it
 !kick @user -- allows you to kick unwanted users
-!ban @user -- alows you to ban certain unwanted users
+!ban @user -- allows you to ban certain unwanted users
+!addRole @user roleName -- allows you to add a role to a user
+!removeRole @user roleName -- allows you to remove a role from a user
 !helpme -- list all the available commends
 !contact -- show contact info about creator

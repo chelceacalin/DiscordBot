@@ -1,6 +1,5 @@
 import os
 
-import discord
 from discord import Intents
 
 from bot_commands import *
@@ -25,6 +24,7 @@ async def on_ready():
 client.add_listener(on_member_join)
 client.add_listener(on_member_remove)
 client.add_listener(on_message)
+client.add_listener(on_command_error)
 
 # Bot Commands
 client.add_command(hello)
@@ -36,6 +36,8 @@ client.add_command(leave)
 client.add_command(kick)
 client.add_command(ban)
 client.add_command(contact)
+client.add_command(addRole)
+client.add_command(removeRole)
 
 # Http Bot Commands
 client.add_command(inspire)
@@ -46,16 +48,20 @@ client.add_command(inspirePrivate)
 
 @commands.command(name='helpme')
 async def helps(ctx: commands.Context):
-    with open("commands.txt", "r") as f:
-        commands_content = f.read()
-        command_lines = commands_content.split('\n')
-        embed = discord.Embed(title="Commands", color=discord.Color.blue())
+    try:
+        with open("commands.txt", "r") as f:
+            commands_content = f.read()
+            command_lines = commands_content.split('\n')
+            embed = discord.Embed(title="Commands", color=discord.Color.blue())
 
-    for line in command_lines:
-        command_name, description = line.split(" -- ")
-        embed.add_field(name=command_name.strip(), value=description.strip(), inline=False)
+        for line in command_lines:
+            command_name, description = line.split(" -- ")
+            embed.add_field(name=command_name.strip(), value=description.strip(), inline=False)
 
+    except Exception as e:
+        print(e)
     await ctx.send(embed=embed)
+
 
 # Help
 client.add_command(helps)
