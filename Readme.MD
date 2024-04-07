@@ -19,7 +19,7 @@ Commands so far:
 !addRole @user roleName -- allows you to add a role to a user
 !removeRole @user roleName -- allows you to remove a role from a user
 !question {yourText} -- allows you to ask the bot using ai any question, if you run it locally you must add your open_api_key
-!helpme -- list all the available commends
+!helpme -- list all the available commands
 !contact -- show contact info about creator
 </pre>
 

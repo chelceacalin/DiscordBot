@@ -1,11 +1,9 @@
-import os
-
 from discord import Intents
 
-from bot_commands import *
-from client_commands import *
-from client_events import *
-from http_bot_commands import *
+from files.bot_commands import *
+from files.client_commands import *
+from files.client_events import *
+from files.http_bot_commands import *
 
 # Initialize intents
 intents = Intents.default()
