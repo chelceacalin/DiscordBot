@@ -15,7 +15,8 @@ async def sendMessageOnChannel(member: discord.Member, channel_name: str, messag
 
 
 async def on_member_join(member: discord.Member) -> None:
-    await sendMessageOnChannel(member, "bine_ai_venit", 'Welcome, {}'.format(member), "channel")
+    await sendMessageOnChannel(member, "bine_ai_venit",
+                               f'Welcome, {member}, use "!helpme to learn about the available commands"', "channel")
 
 
 async def on_member_remove(member: discord.Member) -> None:

@@ -1,6 +1,7 @@
+import discord
 from discord import Member
 from discord.ext import commands
-import discord
+
 
 @commands.command(pass_context=True)
 async def join(ctx: commands.Context) -> None:
@@ -49,3 +50,14 @@ async def ban_error(ctx: commands.Context, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("You are missing the permissions to ban members")
 
+
+@commands.command(name='contact')
+async def contact(ctx: commands.Context) -> None:
+    embed = discord.Embed(title="Contact me", description="Find more about me", colour=discord.Colour.blue(),
+                          url="https://www.linkedin.com/in/chelceacalin/")
+    embed.set_author(name="Chelcea Calin",
+                     icon_url="https://media.licdn.com/dms/image/D4D03AQHAmLwKm9oufw/profile-displayphoto"
+                              "-shrink_400_400/0/1670312373590?e=1718236800&v=beta&t"
+                              "=iWJHkcuEWBa0ydZGpf7HgfZKnR1dzSUfM4VC9w1DnVM")
+
+    await ctx.send(embed=embed)
