@@ -7,14 +7,16 @@ Packages needed:
 Commands so far:
 
 <pre>
-!hello
-!dice
+!hello -- say hello to user
+!dice -- roll the dice once
 !inspire  -- message on the server
 !inspire? -- private message
 !join -- if you are on a voice channel, the bot will join it
 !leave -- if the bot is connected on the voice channel, it will leave it
 !kick @user -- allows you to kick unwanted users
 !ban @user -- alows you to ban certain unwanted users
+!helpme -- list all the available commends
+!contact -- show contact info about creator
 </pre>
 
 Also:

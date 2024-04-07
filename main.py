@@ -1,5 +1,6 @@
 import os
 
+import discord
 from discord import Intents
 
 from bot_commands import *
@@ -16,6 +17,7 @@ client = commands.Bot(command_prefix='!', intents=intents)
 
 @client.event
 async def on_ready():
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game(name="!helpme for commands"))
     print('Bot is ready to answer ')
 
 

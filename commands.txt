@@ -6,4 +6,5 @@
 !leave -- if the bot is connected on the voice channel, it will leave it
 !kick @user -- allows you to kick unwanted users
 !ban @user -- alows you to ban certain unwanted users
-!contact -- show info about the bot creator
+!helpme -- list all the available commends
+!contact -- show contact info about creator
