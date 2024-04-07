@@ -42,9 +42,8 @@ client.add_command(removeRole)
 # Http Bot Commands
 client.add_command(inspire)
 client.add_command(inspirePrivate)
+client.add_command(question)
 
-
-# Help Command
 
 @commands.command(name='helpme')
 async def helps(ctx: commands.Context):
@@ -62,8 +61,7 @@ async def helps(ctx: commands.Context):
         print(e)
     await ctx.send(embed=embed)
 
-
-# Help
+# Help Command
 client.add_command(helps)
 
 client.run(os.getenv('DISCORD_TOKEN'))

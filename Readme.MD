@@ -3,6 +3,7 @@ Packages needed:
 * discord.py -> pip install discord.py
 * discord.py[voice] -> pip install -U discord.py[voice]
 * requests
+* openai -> pip install openai
 
 Commands so far:
 
@@ -17,6 +18,7 @@ Commands so far:
 !ban @user -- allows you to ban certain unwanted users
 !addRole @user roleName -- allows you to add a role to a user
 !removeRole @user roleName -- allows you to remove a role from a user
+!question {yourText} -- allows you to ask the bot using ai any question, if you run it locally you must add your open_api_key
 !helpme -- list all the available commends
 !contact -- show contact info about creator
 </pre>
