@@ -8,10 +8,10 @@ import requests
 from discord.ext import commands
 
 Quote = Dict[str, str]
-
+Zen_Quotes_Url="https://zenquotes.io/api/random"
 
 def get_quote():
-    response = requests.get('https://zenquotes.io/api/random')
+    response=requests.get('Zen_Quotes_Url')
     json_data = json.loads(response.text)
     quote: Quote = json_data[0]['q'] + " - " + json_data[0]['a']
     return quote
